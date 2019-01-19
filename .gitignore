@@ -16,5 +16,8 @@ logs
 npm-debug.log*
 yarn-error.log*
 
+# Distribution
+dist
+
 # Dependency directory
 node_modules
