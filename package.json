@@ -1,6 +1,6 @@
 {
   "name": "storybook-addon-i18next",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "React Storybook addon for i18next",
   "keywords": [
     "addon",
