@@ -1,0 +1,24 @@
+{
+  "name": "storybook-addon-i18next",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [
+    "i18next",
+    "storybook",
+    "storybook-addon"
+  ],
+  "homepage": "https://github.com/fynncfchen/storybook-addon-i18next#readme",
+  "bugs": {
+    "url": "https://github.com/fynncfchen/storybook-addon-i18next/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fynncfchen/storybook-addon-i18next.git"
+  },
+  "license": "ISC",
+  "author": "fynncfchen",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
