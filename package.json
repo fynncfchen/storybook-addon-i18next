@@ -17,7 +17,7 @@
   },
   "license": "MIT",
   "files": [
-    "dist",
+    "src",
     "manager.js",
     "preview.js",
     "register.js"
