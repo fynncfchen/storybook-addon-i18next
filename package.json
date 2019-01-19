@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "description": "React Storybook addon for i18next",
   "keywords": [
+    "addon",
     "i18next",
-    "storybook",
-    "storybook-addon"
+    "storybook"
   ],
   "homepage": "https://github.com/fynncfchen/storybook-addon-i18next#readme",
   "bugs": {
@@ -15,10 +15,17 @@
     "type": "git",
     "url": "git+https://github.com/fynncfchen/storybook-addon-i18next.git"
   },
-  "license": "ISC",
-  "author": "fynncfchen",
-  "main": "index.js",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "jsnext:main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@emotion/styled": "^10.0.6",
+    "@storybook/addons": "^4.1.7"
+  },
+  "peerDependencies": {
+    "react": "*"
   }
 }
