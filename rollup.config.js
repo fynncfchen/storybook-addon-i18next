@@ -20,13 +20,8 @@ const plugins = [
 export default [{
   input: './src/preview/index.js',
   output: [{
-    file: './dist/preview.js',
-    sourcemap: true,
+    file: './preview.js',
     format: 'cjs',
-  }, {
-    file: './dist/preview.es.js',
-    sourcemap: true,
-    format: 'es',
   }],
   plugins,
   external: [
@@ -39,13 +34,8 @@ export default [{
 }, {
   input: './src/manager/index.js',
   output: [{
-    file: './dist/manager.js',
-    sourcemap: true,
+    file: './manager.js',
     format: 'cjs',
-  }, {
-    file: './dist/manager.es.js',
-    sourcemap: true,
-    format: 'es',
   }],
   plugins,
   external: [
@@ -55,35 +45,5 @@ export default [{
     'core-js',
     'prop-types',
     'react',
-    'core-js/modules/web.dom.iterable',
-    'core-js/modules/es7.object.entries',
-    'core-js/modules/es6.array.iterator',
-    'core-js/modules/es6.function.bind',
-    'core-js/modules/es6.array.map',
-  ],
-}, {
-  input: './src/register.js',
-  output: [{
-    file: './dist/register.js',
-    sourcemap: true,
-    format: 'cjs',
-  }, {
-    file: './dist/register.es.js',
-    sourcemap: true,
-    format: 'es',
-  }],
-  plugins,
-  external: [
-    '@emotion/styled',
-    '@storybook/addons',
-    '@storybook/components',
-    'core-js',
-    'prop-types',
-    'react',
-    'core-js/modules/web.dom.iterable',
-    'core-js/modules/es7.object.entries',
-    'core-js/modules/es6.array.iterator',
-    'core-js/modules/es6.function.bind',
-    'core-js/modules/es6.array.map',
   ],
 }];

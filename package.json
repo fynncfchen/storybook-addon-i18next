@@ -22,10 +22,11 @@
     "preview.js",
     "register.js"
   ],
-  "main": "dist/preview.js",
+  "main": "preview.js",
   "jsnext:main": "src/preview",
   "scripts": {
-    "build": "rollup -c rollup.config.js"
+    "build": "rollup -c rollup.config.js",
+    "clean": "shx rm -rf ./manager.js ./preview.js"
   },
   "dependencies": {
     "@emotion/styled": "^10.0.6",
@@ -48,7 +49,8 @@
     "rollup-plugin-babel": "^4.3.1",
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-eslint": "^5.0.0",
-    "rollup-plugin-node-resolve": "^4.0.0"
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "shx": "^0.3.2"
   },
   "peerDependencies": {
     "react": "*"
