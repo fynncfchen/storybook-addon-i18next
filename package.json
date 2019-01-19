@@ -29,6 +29,7 @@
     "clean": "shx rm -rf ./manager.js ./preview.js"
   },
   "dependencies": {
+    "@emotion/styled": "^0.10.6",
     "@storybook/addons": "^4.1.7",
     "@storybook/components": "^4.1.7",
     "prop-types": "^15.6.2",
@@ -38,7 +39,6 @@
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
-    "@emotion/styled": "^0.10.6",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.12.1",
     "eslint-config-airbnb": "^17.1.0",
@@ -53,7 +53,6 @@
     "shx": "^0.3.2"
   },
   "peerDependencies": {
-    "@emotion/styled": "^0.10.6",
     "react": "*"
   }
 }
