@@ -32,7 +32,7 @@ class I18NextTool extends React.Component {
   render() {
     return (
       <>
-        <IconButton key="viewport" title="Change the language">
+        <IconButton key="i18next" title="Change the language">
           <Icons icon="globe" />
         </IconButton>
       </>
