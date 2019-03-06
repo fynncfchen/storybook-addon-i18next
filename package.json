@@ -29,27 +29,27 @@
     "clean": "shx rm -rf ./manager.js ./preview.js"
   },
   "dependencies": {
-    "@emotion/styled": "^0.10.6",
-    "@storybook/addons": "^4.1.7",
-    "@storybook/components": "^4.1.7",
-    "prop-types": "^15.6.2",
-    "react-i18next": "^9.0.4"
+    "@emotion/styled": "^10.0.7",
+    "@storybook/addons": "^5.0.0",
+    "@storybook/components": "^5.0.0",
+    "prop-types": "^15.7.2",
+    "react-i18next": "^9.0.10"
   },
   "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.12.1",
+    "eslint": "^5.15.1",
     "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
-    "rollup": "^1.1.0",
-    "rollup-plugin-babel": "^4.3.1",
-    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup": "^1.4.1",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.2.1",
     "rollup-plugin-eslint": "^5.0.0",
-    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-node-resolve": "^4.0.1",
     "shx": "^0.3.2"
   },
   "peerDependencies": {
