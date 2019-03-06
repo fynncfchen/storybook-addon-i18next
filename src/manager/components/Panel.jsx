@@ -3,10 +3,7 @@ import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { Field, Select } from '@storybook/components';
 
-import {
-  LANGUAGE_CHANGED_EVENT_ID,
-  CONFIGURE_EVENT_ID,
-} from '../../shared';
+import { LANGUAGE_CHANGED_EVENT_ID, CONFIGURE_EVENT_ID } from '../../shared';
 
 const Container = styled.div({
   padding: 15,
@@ -65,13 +62,8 @@ class Panel extends React.Component {
   }
 
   render() {
-    const {
-      active,
-    } = this.props;
-    const {
-      language,
-      languages,
-    } = this.state;
+    const { active } = this.props;
+    const { language, languages } = this.state;
 
     return active ? (
       <Container>
@@ -81,10 +73,16 @@ class Panel extends React.Component {
             value={language || ''}
             onChange={this.handleLanguageSelect}
           >
-            {languages ? Object.entries(languages).map(([key, name]) => (
-              <option key={key} value={key}>{name}</option>
-            )) : (
-              <option value="" disabled>(No Languages)</option>
+            {languages ? (
+              Object.entries(languages).map(([key, name]) => (
+                <option key={key} value={key}>
+                  {name}
+                </option>
+              ))
+            ) : (
+              <option value="" disabled>
+                (No Languages)
+              </option>
             )}
           </Select>
         </Field>
