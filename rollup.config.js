@@ -17,33 +17,41 @@ const plugins = [
   commonjs(),
 ];
 
-export default [{
-  input: './src/preview/index.js',
-  output: [{
-    file: './preview.js',
-    format: 'cjs',
-  }],
-  plugins,
-  external: [
-    '@storybook/addons',
-    'core-js/modules/es6.function.bind',
-    'prop-types',
-    'react',
-    'react-i18next',
-  ],
-}, {
-  input: './src/manager/index.js',
-  output: [{
-    file: './manager.js',
-    format: 'cjs',
-  }],
-  plugins,
-  external: [
-    '@emotion/styled',
-    '@storybook/addons',
-    '@storybook/components',
-    'core-js',
-    'prop-types',
-    'react',
-  ],
-}];
+export default [
+  {
+    input: './src/preview/index.js',
+    output: [
+      {
+        file: './preview.js',
+        format: 'cjs',
+      },
+    ],
+    plugins,
+    external: [
+      '@storybook/addons',
+      'core-js/modules/es6.function.bind',
+      'prop-types',
+      'react',
+      'react-i18next',
+    ],
+  },
+  {
+    input: './src/manager/index.js',
+    output: [
+      {
+        file: './manager.js',
+        format: 'cjs',
+      },
+    ],
+    plugins,
+    external: [
+      '@emotion/styled',
+      '@storybook/addons',
+      '@storybook/core-events',
+      '@storybook/components',
+      'core-js',
+      'prop-types',
+      'react',
+    ],
+  },
+];
