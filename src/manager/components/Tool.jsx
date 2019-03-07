@@ -1,21 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Icons, IconButton } from '@storybook/components';
+import {
+  Icons,
+  IconButton,
+  WithTooltip,
+  TooltipLinkList,
+} from '@storybook/components';
 import { SET_STORIES } from '@storybook/core-events';
+
+import { CONFIGURE_EVENT_ID, LANGUAGE_CHANGED_EVENT_ID } from '../../shared';
 
 class I18NextTool extends React.Component {
   constructor(props) {
     super(props);
 
-    // this.state = {
-    //   selected: null,
-    // };
+    this.state = {
+      isTooltipExpanded: false,
+      language: null,
+      languages: null,
+    };
+
+    this.configure = this.configure.bind(this);
+    this.emitLanguageChanged = this.emitLanguageChanged.bind(this);
+    this.handleLanguageClick = this.handleLanguageClick.bind(this);
 
     this.listener = () => {
-      // this.setState({
-      //   selected: null,
-      // });
+      const { api } = this.props;
+      api.on(CONFIGURE_EVENT_ID, this.configure);
     };
   }
 
@@ -29,13 +41,48 @@ class I18NextTool extends React.Component {
     api.off(SET_STORIES, this.listener);
   }
 
+  configure(options) {
+    const { i18n, languages } = options;
+    const { language } = i18n;
+    this.setState({ language, languages });
+  }
+
+  emitLanguageChanged() {
+    const { api } = this.props;
+    const { language } = this.state;
+    api.emit(LANGUAGE_CHANGED_EVENT_ID, language);
+  }
+
+  handleLanguageClick(event) {
+    const { dataset: { value } = {} } = event.currentTarget;
+    this.setState({ isTooltipExpanded: false, language: value }, () => {
+      this.emitLanguageChanged();
+    });
+  }
+
   render() {
+    const { isTooltipExpanded, languages } = this.state;
+
+    const items = Object.entries(languages || {}).map(([key, name]) => ({
+      id: key,
+      title: name,
+      onClick: this.handleLanguageClick,
+      'data-value': key,
+    }));
+
     return (
-      <>
+      <WithTooltip
+        placement="top"
+        trigger="click"
+        tooltipShown={isTooltipExpanded}
+        onVisibilityChange={t => this.setState({ isTooltipExpanded: t })}
+        tooltip={<TooltipLinkList links={items} />}
+        closeOnClick
+      >
         <IconButton key="i18next" title="Change the language">
           <Icons icon="globe" />
         </IconButton>
-      </>
+      </WithTooltip>
     );
   }
 }
