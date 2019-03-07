@@ -19,7 +19,7 @@ const plugins = [
 
 export default [
   {
-    input: './src/preview/index.js',
+    input: './src/preview.js',
     output: [
       {
         file: './preview.js',
@@ -36,7 +36,7 @@ export default [
     ],
   },
   {
-    input: './src/manager/index.js',
+    input: './src/manager.js',
     output: [
       {
         file: './manager.js',

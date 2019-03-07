@@ -9,7 +9,7 @@ import {
 } from '@storybook/components';
 import { SET_STORIES } from '@storybook/core-events';
 
-import { CONFIGURE_EVENT_ID, LANGUAGE_CHANGED_EVENT_ID } from '../../shared';
+import { CONFIGURE_EVENT_ID, LANGUAGE_CHANGED_EVENT_ID } from './constants';
 
 class I18NextTool extends React.Component {
   constructor(props) {

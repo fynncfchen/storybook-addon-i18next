@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import addons, { makeDecorator } from '@storybook/addons';
 import { I18nextProvider, withNamespaces } from 'react-i18next';
 
-import { CONFIGURE_EVENT_ID, LANGUAGE_CHANGED_EVENT_ID } from '../shared';
+import { CONFIGURE_EVENT_ID, LANGUAGE_CHANGED_EVENT_ID } from './constants';
 
 class Wrapper extends React.Component {
   constructor(props, context) {

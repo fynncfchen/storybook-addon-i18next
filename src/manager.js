@@ -2,9 +2,9 @@
 import React from 'react';
 import addons, { types } from '@storybook/addons';
 
-import Tool from './components/Tool';
+import Tool from './Tool';
 
-import { ADDON_ID } from '../shared';
+import { ADDON_ID } from './constants';
 
 // eslint-disable-next-line import/prefer-default-export
 export const register = () => {
