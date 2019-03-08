@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import addons, { makeDecorator } from '@storybook/addons';
-import { I18nextProvider, withNamespaces } from 'react-i18next';
+import { I18nextProvider } from 'react-i18next';
 
 import { CONFIGURE_EVENT_ID, LANGUAGE_CHANGED_EVENT_ID } from './constants';
 
@@ -45,7 +45,8 @@ Wrapper.propTypes = {
   }).isRequired,
 };
 
-const withI18next = makeDecorator({
+// eslint-disable-next-line import/prefer-default-export
+export const withI18next = makeDecorator({
   name: 'withI18next',
   wrapper: (getStory, context, { options }) => {
     const channel = addons.getChannel();
@@ -54,5 +55,3 @@ const withI18next = makeDecorator({
     return <Wrapper channel={channel} story={getStory(context)} i18n={i18n} />;
   },
 });
-
-export { withI18next, withNamespaces };

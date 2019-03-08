@@ -39,13 +39,13 @@ import { withI18next } from 'storybook-addon-i18next';
 
 ### i18n : Object
 
-----
+---
 
 An [configuration][i18next-configuration-options] object for [i18next][i18next].
 
 ### languages : Object
 
-----
+---
 
 A key-value pair of language codes and display name
 
@@ -76,14 +76,14 @@ Example in `.storybook/config.js`:
 
 ```javascript
 import i18n from 'i18next';
-import { reactI18nextModule } from 'react-i18next';
+import { initReactI18next } from 'react-i18next';
 import Backend from 'i18next-xhr-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
 i18n
   .use(Backend)
   .use(LanguageDetector)
-  .use(reactI18nextModule)
+  .use(initReactI18next)
   .init({
     whitelist: ['en', 'zh-TW'],
     lng: 'en',
@@ -93,13 +93,20 @@ i18n
     },
   });
 
-addDecorator(withI18next({
-  i18n,
-  languages: {
-    en: 'English',
-    'zh-TW': '繁體中文',
-  }
-}));
+addDecorator(
+  withI18next({
+    i18n,
+    languages: {
+      en: 'English',
+      'zh-TW': '繁體中文',
+    },
+  })
+);
+
+// Add <Suspense> after withI18next decorator
+addDecorator((story, context) => (
+  <Suspense fallback="Loading...">{story(context)}</Suspense>
+));
 ```
 
 [i18next]: https://www.i18next.com/
