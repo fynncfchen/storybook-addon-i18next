@@ -91,6 +91,7 @@ I18NextTool.propTypes = {
   api: PropTypes.shape({
     on: PropTypes.func,
     off: PropTypes.func,
+    emit: PropTypes.func,
   }).isRequired,
 };
 
