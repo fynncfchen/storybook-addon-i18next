@@ -25,7 +25,7 @@
   "main": "preview.js",
   "scripts": {
     "build": "rollup -c rollup.config.js",
-    "clean": "shx rm -rf ./manager.js ./preview.js"
+    "clean": "rm -rf ./manager.js ./preview.js"
   },
   "dependencies": {
     "@emotion/styled": "^10.0.11",
@@ -53,8 +53,7 @@
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^9.3.4",
     "rollup-plugin-eslint": "^5.1.0",
-    "rollup-plugin-node-resolve": "^4.2.3",
-    "shx": "^0.3.2"
+    "rollup-plugin-node-resolve": "^4.2.3"
   },
   "peerDependencies": {
     "react": "*"
