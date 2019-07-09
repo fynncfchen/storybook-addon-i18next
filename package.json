@@ -19,16 +19,13 @@
   "files": [
     "src",
     "manager.js",
-    "manager.es.js",
     "preview.js",
-    "preview.es.js",
     "register.js"
   ],
   "main": "preview.js",
-  "module": "preview.es.js",
   "scripts": {
     "build": "rollup -c rollup.config.js",
-    "clean": "rm -rf ./manager.js ./manager.es.js ./preview.js ./preview.es.js"
+    "clean": "rm -rf ./manager.js ./preview.js"
   },
   "dependencies": {
     "@emotion/styled": "^10.0.11",
