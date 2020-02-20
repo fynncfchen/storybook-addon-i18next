@@ -11,6 +11,7 @@ class Wrapper extends React.Component {
     super(props, context);
 
     this.changeLanguage = this.changeLanguage.bind(this);
+    this.state = { loading: false };
   }
 
   componentDidMount() {
@@ -26,10 +27,24 @@ class Wrapper extends React.Component {
   changeLanguage(language) {
     const { i18n } = this.props;
     i18n.changeLanguage(language);
+    // quick hack to full reload child
+    this.setState({
+      loading: true,
+    }, () => {
+      setTimeout(() => {
+        this.setState({
+          loading: false
+        })
+      }, 300)
+    })
   }
 
   render() {
     const { story, i18n } = this.props;
+    const { loading } = this.state;
+    // quick hack to full reload child
+    if (loading) return null;
+
     return <I18nextProvider i18n={i18n}>{story}</I18nextProvider>;
   }
 }

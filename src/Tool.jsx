@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import {
   Icons,
   IconButton,
-  WithTooltip,
+  WithTooltipPure,
   TooltipLinkList,
 } from '@storybook/components';
 import { SET_STORIES } from '@storybook/core-events';
@@ -71,7 +71,7 @@ class I18NextTool extends React.Component {
     }));
 
     return (
-      <WithTooltip
+      <WithTooltipPure
         placement="top"
         trigger="click"
         tooltipShown={isTooltipExpanded}
@@ -82,7 +82,7 @@ class I18NextTool extends React.Component {
         <IconButton key="i18next" title="Change the language">
           <Icons icon="globe" />
         </IconButton>
-      </WithTooltip>
+      </WithTooltipPure>
     );
   }
 }
