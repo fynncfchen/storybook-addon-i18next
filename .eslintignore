@@ -2,5 +2,3 @@ node_modules
 
 /manager.js
 /preview.js
-
-!.eslintrc.js
