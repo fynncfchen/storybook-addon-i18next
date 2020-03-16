@@ -28,11 +28,11 @@
     "clean": "rm -rf ./manager.js ./preview.js"
   },
   "dependencies": {
-    "@emotion/styled": "^10.0.14",
-    "@storybook/addons": "^5.1.9",
-    "@storybook/components": "^5.1.9",
-    "@storybook/core-events": "^5.1.9",
-    "@storybook/theming": "^5.1.9",
+    "@emotion/styled": "^10.0.27",
+    "@storybook/addons": "^5.3.17",
+    "@storybook/components": "^5.3.17",
+    "@storybook/core-events": "^5.3.17",
+    "@storybook/theming": "^5.3.17",
     "prop-types": "^15.7.2",
     "react-i18next": "^10.11.4"
   },
