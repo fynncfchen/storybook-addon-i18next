@@ -32,7 +32,7 @@ class Wrapper extends React.Component {
     const { Story, i18n } = this.props;
     return (
       <I18nextProvider i18n={i18n}>
-        <Story i18n={i18n} />
+        <Story />
       </I18nextProvider>
     );
   }
