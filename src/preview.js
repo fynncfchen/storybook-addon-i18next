@@ -39,7 +39,7 @@ class Wrapper extends React.Component {
 }
 
 Wrapper.propTypes = {
-  Story: PropTypes.func.isRequired,
+  Story: PropTypes.elementType.isRequired,
   channel: PropTypes.shape({
     on: PropTypes.func,
     removeListener: PropTypes.func,
