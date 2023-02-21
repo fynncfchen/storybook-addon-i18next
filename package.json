@@ -5,7 +5,8 @@
   "keywords": [
     "addon",
     "i18next",
-    "storybook"
+    "storybook",
+    "storybook-addon"
   ],
   "homepage": "https://github.com/fynncfchen/storybook-addon-i18next#readme",
   "bugs": {
